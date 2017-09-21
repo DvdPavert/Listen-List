@@ -7,14 +7,17 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 /**
  * Created by Daniel on 21/09/2017.
  */
 
 class TrackAsyncTask extends AsyncTask<String, Integer, String>{
 
-    Context context;
-    MainActivity main;
+    private Context context;
+    private MainActivity main;
+    private ArrayList<Song> resultsList;
 
     public TrackAsyncTask(MainActivity main)
     {
@@ -42,12 +45,13 @@ class TrackAsyncTask extends AsyncTask<String, Integer, String>{
         {
             JSONObject trackStreamObject = new JSONObject(result);
             JSONObject resultsObject = trackStreamObject.getJSONObject("results");
+            //// TODO: 21/09/2017 Get the right info from the JSON
 ;        }
         catch (JSONException e)
         {
             e.printStackTrace();
         }
 
-        this.main.trackStartIntent();
+        this.main.trackStartIntent(resultsList);
     }
 }

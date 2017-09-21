@@ -10,7 +10,7 @@ public class Song
     private String name;
     private String artist;
     private String album;
-    private Boolean seen;
+    private Boolean inList;
 
 
     public Song(String name, String artist, String album)
@@ -18,8 +18,7 @@ public class Song
         this.name = name;
         this.artist = artist;
         this.album = album;
-        this.seen = false;
-
+        this.inList = false;
     }
 
     public String getArtist() {
@@ -38,12 +37,12 @@ public class Song
         album = album;
     }
 
-    public Boolean getSeen() {
-        return seen;
+    public Boolean getInList() {
+        return inList;
     }
 
-    public void setSeen(Boolean seen) {
-        this.seen = seen;
+    public void setInList(Boolean inList) {
+        this.inList = inList;
     }
 
     public String getName() {

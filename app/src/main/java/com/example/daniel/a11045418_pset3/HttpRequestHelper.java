@@ -18,7 +18,7 @@ public class HttpRequestHelper {
         String result = "";
         String chosenTag = params[0];
 
-        URL url = null;
+        URL url = "ws.audioscrobbler.com/2.0/?method=track.search&track=Believe&api_key=YOUR_API_KEY&format=json";
 
         HttpURLConnection connect;
 
@@ -33,7 +33,8 @@ public class HttpRequestHelper {
 
                 if(responseCode >= 200 && responseCode < 300)
                 {
-                    BufferedReader reader = new BufferedReader(new InputStreamReader(connect.getInputStream()));
+                    BufferedReader reader = new BufferedReader
+                            (new InputStreamReader(connect.getInputStream()));
                     String line;
 
                     while((line = reader.readLine()) != null)
