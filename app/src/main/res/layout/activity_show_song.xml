@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context="com.example.daniel.a11045418_pset3.ShowSongActivity">
 
+    <EditText
+        android:id="@+id/searchText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
 </LinearLayout>

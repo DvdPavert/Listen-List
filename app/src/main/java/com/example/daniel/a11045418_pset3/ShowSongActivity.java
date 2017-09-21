@@ -27,4 +27,14 @@ public class ShowSongActivity extends AppCompatActivity {
         //// TODO: 19/09/2017 Set song.info en load into the textViews
 
     }
+
+    private void removeSong()
+    {
+        //// TODO: 20/09/2017 Remove song from the list
+    }
+
+    private void addSong()
+    {
+
+    }
 }
